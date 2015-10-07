@@ -1,14 +1,28 @@
 group 'com.teamtreehouse'
 version '1.0-SNAPSHOT'
 
+// Include the Spring Boot plugin
+buildscript {
+    repositories{
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE'
+    }
+}
+
+// Apply the Spring Boot plugin
+apply plugin: 'spring-boot'
+
+// Apply the Java plugin (expects src/main/java to be source folder)
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
-
+// Specify the location where our dependencies will be found
 repositories {
     mavenCentral()
 }
 
+// Specify dependencies
 dependencies {
-    compile 'org.springframework:spring-webmvc:4.2.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web:1.2.6.RELEASE'
 }
