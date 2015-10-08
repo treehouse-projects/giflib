@@ -75,6 +75,46 @@ nav ul li.active, nav ul li:hover {
     color: #757378;
 }
 
+.gifs img {
+    height: 240px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.col {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.favorite {
+    position: absolute;
+    top: 0;
+    right: 0.75rem;
+    display: block;
+    height: 60px;
+    width: 60px;
+    z-index: 100;
+    border-radius: 0 6px 0 0;
+}
+
+.mark.favorite {
+    background: url(icons/favorite.png) no-repeat 0 0;
+}
+
+.unmark.favorite {
+    background: url(icons/unfavorite.png) no-repeat 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .gifs {
+        padding: 0 1.5rem;
+    }
+    .gifs img {
+        width: 100%;
+    }
+}
+
+
 @media only screen and (max-width: 992px) {
     nav .brand-logo {
         left: 0;
@@ -87,7 +127,7 @@ nav ul li.active, nav ul li:hover {
         width: 100%;
     }
 
-    .nav-wrapper .container {
+    .navbar-fixed .container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
