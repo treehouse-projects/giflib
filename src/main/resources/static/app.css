@@ -118,7 +118,7 @@ nav ul li.active, nav ul li:hover {
     background: url(icons/unfavorite.png) no-repeat 0 0;
 }
 
-.gif-detail .col {
+.gif-detail .frame .col {
     padding: 1.5rem 5rem;
     text-align: center;
     border: 1px solid #e3e1e6;
@@ -129,6 +129,17 @@ nav ul li.active, nav ul li:hover {
 .gif-detail img {
     display: inline-block;
     width: 100%;
+}
+
+.gif-detail .meta h4 {
+    color: #896bb3;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+.gif-detail .meta p {
+    margin-top: 3px;
+    color: #a9a7ac;
 }
 
 #sidenav-overlay {
@@ -177,20 +188,24 @@ nav ul li.active, nav ul li:hover {
     }
 
     .gifs {
-            padding: 0 1.5rem;
-        }
-        .gifs img {
-            width: 100%;
-        }
-        .gif-detail .col {
-            padding: 0 1rem;
-            background: none;
-            border: none;
-        }
-        .gif-detail img {
-            border-radius: 6px;
-        }
-        .gif-detail .favorite {
-            right: 1rem;
-        }
+        padding: 0 1.5rem;
+    }
+    .gifs img {
+        width: 100%;
+    }
+    .gif-detail .frame .col {
+        padding: 0 1rem;
+        background: none;
+        border: none;
+    }
+    .gif-detail img {
+        border-radius: 6px;
+    }
+    .gif-detail .favorite {
+        right: 1rem;
+    }
+
+    .gif-detail .meta .circle {
+        border-radius: 50%;
+    }
 }
