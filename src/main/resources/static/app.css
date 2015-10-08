@@ -42,11 +42,69 @@ nav ul li.active, nav ul li:hover {
     border-bottom: 1px solid #27252b;
 }
 
+.search-bar .input-field {
+    background-color: #f2f0f5;
+}
+
+.search-bar .input-field {
+    border: 1px solid #dad7de;
+    border-radius: 4px;
+}
+
+.search-bar .input-field input {
+    border: none;
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+}
+
+.search-bar .input-field input:focus {
+    background-color: transparent;
+}
+
+.search-bar .input-field input ~ .material-icons, .search-bar .input-field input:focus ~ .material-icons {
+    top: 0.5rem;
+    color: #896bb3;
+}
+
+::-webkit-input-placeholder {
+    color: #a29fa6;
+}
+
+.search-bar .input-field input, .search-bar .input-field input:focus {
+    color: #757378;
+}
+
 @media only screen and (max-width: 992px) {
     nav .brand-logo {
         left: 0;
         -webkit-transform: none;
         transform: none;
         position: static;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .nav-wrapper .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .search-bar .input-field {
+        margin-top: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .search-bar .input-field input {
+        height: 4rem;
+        padding-left: 1.5rem;
+    }
+
+    .search-bar .input-field input ~ .material-icons, .search-bar .input-field input:focus ~ .material-icons {
+        top: 1rem;
+        right: 2.4rem;
     }
 }
