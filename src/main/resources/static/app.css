@@ -42,8 +42,12 @@ nav ul li.active, nav ul li:hover {
     border-bottom: 1px solid #27252b;
 }
 
+.search-bar .col {
+    padding: 0;
+}
+
 .search-bar .input-field {
-    background-color: #f2f0f5;
+    background-color: #f7f5fa;
 }
 
 .search-bar .input-field {
@@ -86,6 +90,11 @@ nav ul li.active, nav ul li:hover {
     position: relative;
 }
 
+.container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .favorite {
     position: absolute;
     top: 0;
@@ -97,6 +106,10 @@ nav ul li.active, nav ul li:hover {
     border-radius: 0 6px 0 0;
 }
 
+.gif-detail .favorite {
+    right: 0;
+}
+
 .mark.favorite {
     background: url(icons/favorite.png) no-repeat 0 0;
 }
@@ -105,15 +118,26 @@ nav ul li.active, nav ul li:hover {
     background: url(icons/unfavorite.png) no-repeat 0 0;
 }
 
-@media only screen and (max-width: 600px) {
-    .gifs {
-        padding: 0 1.5rem;
-    }
-    .gifs img {
-        width: 100%;
-    }
+.gif-detail .col {
+    padding: 1.5rem 5rem;
+    text-align: center;
+    border: 1px solid #e3e1e6;
+    background-color: #f7f5fa;
+    border-radius: 6px;
 }
 
+.gif-detail img {
+    display: inline-block;
+    width: 100%;
+}
+
+#sidenav-overlay {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
 
 @media only screen and (max-width: 992px) {
     nav .brand-logo {
@@ -125,6 +149,10 @@ nav ul li.active, nav ul li:hover {
 
     .container {
         width: 100%;
+    }
+
+    .col {
+        padding-right: 0;
     }
 
     .navbar-fixed .container {
@@ -147,4 +175,22 @@ nav ul li.active, nav ul li:hover {
         top: 1rem;
         right: 2.4rem;
     }
+
+    .gifs {
+            padding: 0 1.5rem;
+        }
+        .gifs img {
+            width: 100%;
+        }
+        .gif-detail .col {
+            padding: 0 1rem;
+            background: none;
+            border: none;
+        }
+        .gif-detail img {
+            border-radius: 6px;
+        }
+        .gif-detail .favorite {
+            right: 1rem;
+        }
 }
