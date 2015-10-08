@@ -2,14 +2,37 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+    <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
     <title>giflib | Home</title>
 </head>
 <body>
-    <h1>Home</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi et perspiciatis repellendus. Animi corporis distinctio ex inventore labore laboriosam placeat reiciendis similique tenetur totam? Aliquid deserunt dolore incidunt quisquam quos.</p>
-    <img th:src="@{/gifs/object-oriented-php.gif}" alt="logo"/>
+<nav>
+    <div class="nav-wrapper">
+        <div class="container">
+            <a th:href="@{/}" class="brand-logo">gif<span>.</span>lib</a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a th:href="@{/}">Explore</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Favorites</a></li>
+            </ul>
+            <ul id="mobile-nav" class="side-nav">
+                <li class="active"><a th:href="@{/}">Explore</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Favorites</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
+<script th:src="@{/vendor/materialize/js/materialize.js}"></script>
+<script th:src="@{/app.js}"></script>
 </body>
 </html>

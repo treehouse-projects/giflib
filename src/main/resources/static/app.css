@@ -4,8 +4,49 @@ body {
     font-family: 'varela round', sans-serif;
 }
 
-h1 {
-    padding: 10px;
+nav {
     background-color: #896bb3;
-    color: #ffffff;
+    box-shadow: none;
+}
+
+nav .brand-logo, nav ul li.active a {
+    color: #fefefe;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+}
+
+nav ul li a, nav .brand-logo span {
+    color: #d6c5ec;
+}
+
+nav ul li.active, nav ul li:hover {
+    background-color: inherit;
+}
+
+#mobile-nav, #mobile-nav li.active, #mobile-nav li:hover {
+    background-color: #37333d;
+}
+
+#mobile-nav li a {
+    font-size: 1.3rem;
+    color: #906fbc;
+}
+
+#mobile-nav li.active a {
+    color: #fff;
+}
+
+#mobile-nav li {
+    border-bottom: 1px solid #27252b;
+}
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 0;
+        -webkit-transform: none;
+        transform: none;
+        position: static;
+    }
 }
