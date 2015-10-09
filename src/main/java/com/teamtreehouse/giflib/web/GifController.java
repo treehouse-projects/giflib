@@ -1,5 +1,6 @@
 package com.teamtreehouse.giflib.web;
 
+import com.teamtreehouse.giflib.data.GifRepository;
 import com.teamtreehouse.giflib.model.Gif;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +12,8 @@ import java.time.LocalDate;
 @Controller
 public class GifController {
     @RequestMapping("/")
-    public String listGifs() {
+    public String listGifs(Model model) {
+        model.addAttribute("gifs", GifRepository.ALL_GIFS);
         return "home";
     }
 

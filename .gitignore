@@ -6,3 +6,6 @@
 
 # Gradle
 /.gradle/
+
+#OSX
+.DS_Store

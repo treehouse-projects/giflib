@@ -45,29 +45,11 @@
     </div>
     <div class="gifs container">
         <div class="row">
-            <div class="col s12 l4">
-                <img th:src="@{/gifs/android-explosion.gif}" alt="android-explosion" />
-                <a href="#" class="mark favorite"></a>
-            </div>
-            <div class="col s12 l4">
-                <img th:src="@{/gifs/ben-and-mike.gif}" alt="ben-and-mike" />
-                <a href="#" class="unmark favorite"></a>
-            </div>
-            <div class="col s12 l4">
-                <img th:src="@{/gifs/book-dominos.gif}" alt="book-dominos" />
-                <a href="#" class="mark favorite"></a>
-            </div>
-            <div class="col s12 l4">
-                <img th:src="@{/gifs/compiler-bot.gif}" alt="compiler-bot" />
-                <a href="#" class="unmark favorite"></a>
-            </div>
-            <div class="col s12 l4">
-                <img th:src="@{/gifs/cowboy-coder.gif}" alt="cowboy-coder" />
-                <a href="#" class="mark favorite"></a>
-            </div>
-            <div class="col s12 l4">
-                <img th:src="@{/gifs/infinite-andrew.gif}" alt="infinite-andrew" />
-                <a href="#" class="unmark favorite"></a>
+            <div th:each="gif : ${gifs}" class="col s12 l4">
+                <a th:href="@{|/gif/${gif.name}|}">
+                    <img th:src="@{|/gifs/${gif.name}.gif|}" />
+                    <a href="#" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
+                </a>
             </div>
         </div>
     </div>
