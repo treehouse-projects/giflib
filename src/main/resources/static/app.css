@@ -79,8 +79,16 @@ nav ul li.active, nav ul li:hover {
     color: #757378;
 }
 
+.gifs.container .col:nth-child(3n+1) {
+    padding-left: 0;
+}
+
+.gifs.container .col:nth-child(3n+3) {
+    padding-right: 0;
+}
+
 .gifs img {
-    height: 240px;
+    height: 220px;
     width: 100%;
     border-radius: 6px;
 }
@@ -118,6 +126,10 @@ nav ul li.active, nav ul li:hover {
     background: url(icons/unfavorite.png) no-repeat 0 0;
 }
 
+.gif-detail .col {
+    padding-right: 0;
+}
+
 .gif-detail .frame .col {
     padding: 1.5rem 5rem;
     text-align: center;
@@ -135,6 +147,7 @@ nav ul li.active, nav ul li:hover {
     color: #896bb3;
     font-size: 1.25rem;
     margin-bottom: 0;
+    margin-top: 0.8rem;
 }
 
 .gif-detail .meta p {
@@ -144,6 +157,25 @@ nav ul li.active, nav ul li:hover {
 
 #sidenav-overlay {
     background-color: transparent;
+}
+
+.share {
+    border: 1px solid #e3e1e6;
+    border-radius: 4px;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    margin-top: 8px;
+}
+
+.share .btn {
+    background-color: #896bb3;
+    box-shadow: none;
+    text-transform: none;
+    color: #fefefe;
+}
+
+.share span {
+    color: #896bb3;
+    line-height: 36px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -160,6 +192,14 @@ nav ul li.active, nav ul li:hover {
 
     .container {
         width: 100%;
+    }
+
+    .gifs.container {
+        padding: 0;
+    }
+
+    .gifs.container .col {
+        padding: 0 0.75rem !important;
     }
 
     .col {
@@ -198,6 +238,14 @@ nav ul li.active, nav ul li:hover {
         background: none;
         border: none;
     }
+    .gif-detail .col, .gif-detail .meta {
+        margin-bottom: 0.1rem;
+    }
+
+    .gif-detail .col {
+        padding-right: 1rem;
+    }
+
     .gif-detail img {
         border-radius: 6px;
     }
