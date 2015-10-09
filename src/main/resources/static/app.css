@@ -178,8 +178,47 @@ nav ul li.active, nav ul li:hover {
     line-height: 36px;
 }
 
-@media only screen and (max-width: 600px) {
+.card {
+    box-shadow: none;
+}
 
+.card .card-content {
+    padding: 0;
+}
+
+.card .card-title {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.card .card-title a {
+    color:#fff;
+    display:block;
+    padding: 20px;
+}
+
+.categories .row .col:nth-child(4n+1) .card {
+    background-color: #6bb3ad;
+}
+
+.categories .row .col:nth-child(4n+2) .card {
+    background-color: #b36b71;
+}
+
+.categories .row .col:nth-child(4n+3) .card {
+    background-color: #95b36b;
+}
+
+.categories .row .col:nth-child(4n+4) .card {
+    background-color: #896bb3;
+}
+
+.chip {
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+    border-radius: 8px;
+    background-color: #f7f5fa;
+    border: 1px solid #E0DCE6;
 }
 
 @media only screen and (max-width: 992px) {
@@ -255,5 +294,9 @@ nav ul li.active, nav ul li:hover {
 
     .gif-detail .meta .circle {
         border-radius: 50%;
+    }
+
+    .chip {
+        margin-left: 0.8rem;
     }
 }

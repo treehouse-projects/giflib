@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
-    <title th:text="'giflib ' + '| ' + ${gif.name}">giflib</title>
+    <title th:text="'giflib | ' + ${gif.name}">giflib</title>
 </head>
 <body>
     <div class="navbar-fixed">
@@ -20,12 +20,12 @@
                 <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li class="active"><a th:href="@{/}">Explore</a></li>
-                    <li><a href="#">Categories</a></li>
+                    <li><a th:href="@{/categories}">Categories</a></li>
                     <li><a th:href="@{/favorites}">Favorites</a></li>
                 </ul>
                 <ul id="mobile-nav" class="side-nav">
                     <li class="active"><a th:href="@{/}">Explore</a></li>
-                    <li><a href="#">Categories</a></li>
+                    <li><a th:href="@{/categories}">Categories</a></li>
                     <li><a th:href="@{/favorites}">Favorites</a></li>
                 </ul>
             </div>

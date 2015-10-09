@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" th:href="@{/favicon.png}" />
+
+    <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" th:href="@{/app.css}" />
+
+    <title th:text="'giflib | ' + ${category.name}">giflib | Category</title>
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+        <div class="container">
+            <a th:href="@{/}" class="brand-logo">gif<span>.</span>lib</a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a th:href="@{/}">Explore</a></li>
+                <li><a th:href="@{/categories}">Categories</a></li>
+                <li><a th:href="@{/favorites}">Favorites</a></li>
+            </ul>
+            <ul id="mobile-nav" class="side-nav">
+                <li><a th:href="@{/}">Explore</a></li>
+                <li><a th:href="@{/categories}">Categories</a></li>
+                <li><a th:href="@{/favorites}">Favorites</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="search-bar container">
+    <div class="row">
+        <div class="col s12">
+            <form action="#" method="get">
+                <div class="input-field">
+                    <input name="q" type="search" placeholder="Search all gifs..." required="required" autocomplete="off"/>
+                    <i class="material-icons">search</i>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="gifs container">
+    <div class="chip" th:text="${category.name}"></div>
+    <div class="row">
+        <div th:each="gif : ${gifs}" class="col s12 l4">
+            <a th:href="@{|/gif/${gif.name}|}">
+                <img th:src="@{|/gifs/${gif.name}.gif|}" />
+                <a href="#" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
+<script th:src="@{/vendor/materialize/js/materialize.js}"></script>
+<script th:src="@{/app.js}"></script>
+</body>
+</html>
