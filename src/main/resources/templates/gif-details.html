@@ -58,7 +58,7 @@
                     </div>
                     <div class="col s9">
                         <h4 th:text="${gif.username}"></h4>
-                        <p th:text="|Uploaded on ${gif.dateUploaded}|"></p>
+                        <p th:text="|Uploaded on ${#temporals.format(gif.dateUploaded, 'MMM d yyyy')}|"></p>
                     </div>
                 </div>
             </div>
