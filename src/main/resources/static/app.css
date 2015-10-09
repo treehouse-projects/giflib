@@ -224,7 +224,7 @@ nav ul li.active, nav ul li:hover {
 
     .search-bar .input-field input ~ .material-icons, .search-bar .input-field input:focus ~ .material-icons {
         top: 1rem;
-        right: 2.4rem;
+        right: 1.8rem;
     }
 
     .gifs {

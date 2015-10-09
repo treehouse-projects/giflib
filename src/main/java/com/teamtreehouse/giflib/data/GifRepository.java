@@ -4,8 +4,10 @@ import com.teamtreehouse.giflib.model.Gif;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class GifRepository {
@@ -29,5 +31,16 @@ public class GifRepository {
             }
         }
         return null;
+    }
+
+    public List<Gif> getFavorites() {
+        List<Gif> faves = new ArrayList<Gif>();
+        for(Gif gif : ALL_GIFS) {
+            if(gif.isFavorite()) {
+                faves.add(gif);
+            }
+        }
+        return faves;
+        // OR return ALL_GIFS.stream().filter(Gif::isFavorite).collect(Collectors.toList());
     }
 }
