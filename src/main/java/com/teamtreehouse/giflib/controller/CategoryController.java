@@ -1,4 +1,4 @@
-package com.teamtreehouse.giflib.web;
+package com.teamtreehouse.giflib.controller;
 
 import com.teamtreehouse.giflib.data.CategoryRepository;
 import com.teamtreehouse.giflib.data.GifRepository;

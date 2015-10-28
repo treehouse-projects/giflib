@@ -1,4 +1,4 @@
-package com.teamtreehouse.giflib.web;
+package com.teamtreehouse.giflib.controller;
 
 import com.teamtreehouse.giflib.data.GifRepository;
 import com.teamtreehouse.giflib.model.Gif;
@@ -25,7 +25,7 @@ public class GifController {
     @RequestMapping("/gif/{name}")
     public String gifDetails(@PathVariable String name, Model model) {
         Gif gif = gifRepository.findByName(name);
-        model.addAttribute("gif",gif);
+        model.addAttribute("gif", gif);
         return "gif-details";
     }
 
